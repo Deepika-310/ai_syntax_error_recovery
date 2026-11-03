@@ -1,0 +1,7 @@
+float amount;
+float tax;
+float final;
+amount = 250;
+tax = amount * 0.18;
+final = amount + tax;
+print(final);

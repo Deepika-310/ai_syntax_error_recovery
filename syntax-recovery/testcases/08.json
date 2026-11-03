@@ -1,0 +1,12 @@
+{
+  "name": "Garbled expression",
+  "source": "int a;\na = + * 10 abc xyz ;\nint b;\nb = 20;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    2
+  ],
+  "actions": [
+    "Panic-mode sync"
+  ],
+  "recovered_source": "int a;\na = + * 10 abc xyz ;\nint b;\nb = 20;\n"
+}

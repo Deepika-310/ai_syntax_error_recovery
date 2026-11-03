@@ -1,0 +1,7 @@
+int w;
+int h;
+int area;
+w = 4;
+h = 6;
+area = w * h;
+print(area);

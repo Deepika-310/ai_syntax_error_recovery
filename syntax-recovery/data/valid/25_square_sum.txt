@@ -1,0 +1,9 @@
+int i;
+int s;
+i = 1;
+s = 0;
+while (i < 6) {
+    s = s + i * i;
+    i = i + 1;
+}
+print(s);

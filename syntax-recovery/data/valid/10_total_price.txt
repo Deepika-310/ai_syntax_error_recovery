@@ -1,0 +1,7 @@
+float price;
+int qty;
+float total;
+price = 2.5;
+qty = 8;
+total = price * qty;
+print(total);

@@ -1,0 +1,15 @@
+int a;
+int b;
+int c;
+int min;
+a = 9;
+b = 3;
+c = 6;
+min = a;
+if (b < min) {
+    min = b;
+}
+if (c < min) {
+    min = c;
+}
+print(min);

@@ -1,0 +1,46 @@
+<div class="controls">
+  <label>Example <select id="example"></select></label>
+  <label>Strategy <select id="strategy"></select></label>
+  <button id="analyze" class="primary" type="button">Analyze</button>
+  <button id="step" type="button">Step through</button>
+  <button id="reset" type="button">Reset</button>
+</div>
+
+<div class="workspace">
+  <section class="editor-panel" aria-label="Source code">
+    <div class="editor" id="editor">
+      <div class="gutter" id="gutter" aria-hidden="true"></div>
+      <div class="stack">
+        <pre class="backdrop" id="backdrop" aria-hidden="true"></pre>
+        <textarea id="source" spellcheck="false" wrap="off" autocomplete="off" autocapitalize="off" aria-label="Source code"></textarea>
+      </div>
+    </div>
+    <p class="legend" id="legend">
+      <span><b class="mk mk-err">●</b> detected</span>
+      <span><b class="mk mk-ok">✓</b> recovered</span>
+      <span><b class="mk mk-warn">▲</b> warning</span>
+      <span><b class="mk mk-bad">✕</b> unrecoverable</span>
+    </p>
+    <p class="note" id="status" role="status"></p>
+  </section>
+
+  <section class="results" aria-label="Results">
+    <p class="summary" id="summary">Press Analyze to see the results.</p>
+    <div class="tabs" role="tablist" aria-label="Result views">
+      <button role="tab" id="tab-errors" aria-controls="panel-errors" aria-selected="true">Errors</button>
+      <button role="tab" id="tab-tokens" aria-controls="panel-tokens" aria-selected="false">Tokens</button>
+      <button role="tab" id="tab-trace" aria-controls="panel-trace" aria-selected="false">Trace</button>
+      <button role="tab" id="tab-recovered" aria-controls="panel-recovered" aria-selected="false">Recovered</button>
+      <button role="tab" id="tab-tree" aria-controls="panel-tree" aria-selected="false">Tree</button>
+      <button role="tab" id="tab-compare" aria-controls="panel-compare" aria-selected="false">Compare</button>
+      <button role="tab" id="tab-metrics" aria-controls="panel-metrics" aria-selected="false">Metrics</button>
+    </div>
+    <div role="tabpanel" id="panel-errors" aria-labelledby="tab-errors" class="panel"></div>
+    <div role="tabpanel" id="panel-tokens" aria-labelledby="tab-tokens" class="panel" hidden></div>
+    <div role="tabpanel" id="panel-trace" aria-labelledby="tab-trace" class="panel" hidden></div>
+    <div role="tabpanel" id="panel-recovered" aria-labelledby="tab-recovered" class="panel" hidden></div>
+    <div role="tabpanel" id="panel-tree" aria-labelledby="tab-tree" class="panel" hidden></div>
+    <div role="tabpanel" id="panel-compare" aria-labelledby="tab-compare" class="panel" hidden></div>
+    <div role="tabpanel" id="panel-metrics" aria-labelledby="tab-metrics" class="panel" hidden></div>
+  </section>
+</div>

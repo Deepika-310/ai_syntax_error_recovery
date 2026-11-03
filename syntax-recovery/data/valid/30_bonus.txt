@@ -1,0 +1,10 @@
+int salary;
+int years;
+int bonus;
+salary = 30000;
+years = 6;
+bonus = 0;
+if (years > 5) {
+    bonus = salary / 10;
+}
+print(salary + bonus);

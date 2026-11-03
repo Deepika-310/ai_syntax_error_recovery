@@ -1,0 +1,14 @@
+{
+  "name": "Duplicate operator and empty assignment",
+  "source": "int a;\na = 5 + + 3;\nb = ;\n",
+  "expected_errors": 2,
+  "error_lines": [
+    2,
+    3
+  ],
+  "actions": [
+    "Delete",
+    "Panic-mode sync"
+  ],
+  "recovered_source": "int a;\na = 5 + 3;\nb = ;\n"
+}

@@ -1,0 +1,9 @@
+int a;
+int b;
+a = 3;
+b = 4;
+if (a < b) {
+    if (b < 10) {
+        print(b);
+    }
+}

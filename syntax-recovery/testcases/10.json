@@ -1,0 +1,20 @@
+{
+  "name": "Five errors",
+  "source": "int a\nint b\na = 10 + ;\nif (a > b {\nprint(a)\n}\n",
+  "expected_errors": 5,
+  "error_lines": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "actions": [
+    "Insert",
+    "Insert",
+    "Panic-mode sync",
+    "Insert",
+    "Insert"
+  ],
+  "recovered_source": "int a;\nint b;\na = 10 + ;\nif (a > b) {\nprint(a);\n}\n"
+}

@@ -1,0 +1,368 @@
+{
+  "params": {
+    "baseline": {
+      "temperature": 0.03,
+      "tau": 0.4,
+      "delta": 0.03,
+      "cost_weight": 0.1,
+      "k_gate": 4,
+      "kmax": 12
+    },
+    "isolation_forest": {
+      "temperature": 0.03,
+      "tau": 0.4,
+      "delta": 0.03,
+      "cost_weight": 0.1,
+      "k_gate": 4,
+      "kmax": 12
+    }
+  },
+  "test": {
+    "baseline": {
+      "overall": {
+        "cases": 467,
+        "auto_restored": 66.2,
+        "ambiguous": 20.6,
+        "wrong_apply": 13.3,
+        "mean_cascading": 0.026,
+        "top1": 73.7,
+        "top3": 75.8
+      },
+      "by_kind": {
+        "delete": {
+          "cases": 80,
+          "auto_restored": 70.0,
+          "ambiguous": 13.8,
+          "wrong_apply": 16.2,
+          "mean_cascading": 0.025,
+          "top1": 77.5,
+          "top3": 81.2
+        },
+        "duplicate": {
+          "cases": 152,
+          "auto_restored": 57.2,
+          "ambiguous": 31.6,
+          "wrong_apply": 11.2,
+          "mean_cascading": 0.007,
+          "top1": 62.5,
+          "top3": 63.8
+        },
+        "insert": {
+          "cases": 151,
+          "auto_restored": 72.8,
+          "ambiguous": 17.9,
+          "wrong_apply": 9.3,
+          "mean_cascading": 0.007,
+          "top1": 84.1,
+          "top3": 84.8
+        },
+        "replace": {
+          "cases": 84,
+          "auto_restored": 66.7,
+          "ambiguous": 11.9,
+          "wrong_apply": 21.4,
+          "mean_cascading": 0.095,
+          "top1": 71.4,
+          "top3": 76.2
+        },
+        "swap": {
+          "cases": 133,
+          "auto_restored": 0.0,
+          "ambiguous": 18.0,
+          "wrong_apply": 82.0,
+          "mean_cascading": 0.421,
+          "top1": 0.0,
+          "top3": 0.0
+        }
+      }
+    },
+    "isolation_forest": {
+      "overall": {
+        "cases": 467,
+        "auto_restored": 54.2,
+        "ambiguous": 26.3,
+        "wrong_apply": 19.5,
+        "mean_cascading": 0.094,
+        "top1": 63.0,
+        "top3": 75.8
+      },
+      "by_kind": {
+        "delete": {
+          "cases": 80,
+          "auto_restored": 60.0,
+          "ambiguous": 23.8,
+          "wrong_apply": 16.2,
+          "mean_cascading": 0.025,
+          "top1": 75.0,
+          "top3": 81.2
+        },
+        "duplicate": {
+          "cases": 152,
+          "auto_restored": 46.7,
+          "ambiguous": 35.5,
+          "wrong_apply": 17.8,
+          "mean_cascading": 0.079,
+          "top1": 51.3,
+          "top3": 63.8
+        },
+        "insert": {
+          "cases": 151,
+          "auto_restored": 53.6,
+          "ambiguous": 27.8,
+          "wrong_apply": 18.5,
+          "mean_cascading": 0.119,
+          "top1": 66.9,
+          "top3": 84.8
+        },
+        "replace": {
+          "cases": 84,
+          "auto_restored": 63.1,
+          "ambiguous": 9.5,
+          "wrong_apply": 27.4,
+          "mean_cascading": 0.143,
+          "top1": 65.5,
+          "top3": 76.2
+        },
+        "swap": {
+          "cases": 133,
+          "auto_restored": 0.0,
+          "ambiguous": 11.3,
+          "wrong_apply": 88.7,
+          "mean_cascading": 0.534,
+          "top1": 0.0,
+          "top3": 0.0
+        }
+      }
+    }
+  },
+  "testcases": {
+    "cases": [
+      {
+        "name": "Missing semicolon",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 41.61
+      },
+      {
+        "name": "Extra operator",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 79.82
+      },
+      {
+        "name": "Missing closing parenthesis",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 116.15
+      },
+      {
+        "name": "Missing operand",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 0,
+        "ms": 84.3
+      },
+      {
+        "name": "Wrong closing bracket",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 119.6
+      },
+      {
+        "name": "Assignment in condition",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 2,
+        "edit_count": 0,
+        "ms": 204.75
+      },
+      {
+        "name": "Repeated type keyword",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 44.23
+      },
+      {
+        "name": "Garbled expression",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 5,
+        "edit_count": 0,
+        "ms": 99.18
+      },
+      {
+        "name": "Four independent errors",
+        "passed": true,
+        "problems": [],
+        "detected": 4,
+        "expected": 4,
+        "recovered": 4,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 3,
+        "ms": 265.8
+      },
+      {
+        "name": "Five errors",
+        "passed": true,
+        "problems": [],
+        "detected": 5,
+        "expected": 5,
+        "recovered": 5,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 4,
+        "ms": 329.03
+      },
+      {
+        "name": "Missing closing brace",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 23.33
+      },
+      {
+        "name": "Missing semicolon after print",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 22.04
+      },
+      {
+        "name": "Extra closing brace",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 19.97
+      },
+      {
+        "name": "Missing parenthesis in while",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 121.53
+      },
+      {
+        "name": "Two missing semicolons",
+        "passed": true,
+        "problems": [],
+        "detected": 2,
+        "expected": 2,
+        "recovered": 2,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 2,
+        "ms": 63.92
+      },
+      {
+        "name": "Incomplete assignment",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 0,
+        "ms": 82.09
+      },
+      {
+        "name": "Duplicate operator and empty assignment",
+        "passed": true,
+        "problems": [],
+        "detected": 2,
+        "expected": 2,
+        "recovered": 2,
+        "false_errors": 0,
+        "resume_distance": 0,
+        "edit_count": 1,
+        "ms": 150.57
+      },
+      {
+        "name": "Missing operator",
+        "passed": true,
+        "problems": [],
+        "detected": 1,
+        "expected": 1,
+        "recovered": 1,
+        "false_errors": 0,
+        "resume_distance": 1,
+        "edit_count": 0,
+        "ms": 122.69
+      }
+    ],
+    "count": 18,
+    "passed": 18,
+    "detected": 27,
+    "expected": 27,
+    "detection_rate": 100.0,
+    "recovery_rate": 100.0,
+    "false_errors": 0,
+    "parse_completion_rate": 100.0,
+    "mean_ms": 110.59
+  },
+  "seconds": 196.5
+}

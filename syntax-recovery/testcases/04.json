@@ -1,0 +1,13 @@
+{
+  "name": "Missing operand",
+  "source": "x = a + ;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Panic-mode sync"
+  ],
+  "recovered_source": "x = a + ;\n",
+  "note": "No operand is invented"
+}

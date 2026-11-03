@@ -1,0 +1,12 @@
+{
+  "name": "Wrong closing bracket",
+  "source": "while (a > 10] {\nprint(a);\n}\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Replace"
+  ],
+  "recovered_source": "while (a > 10) {\nprint(a);\n}\n"
+}

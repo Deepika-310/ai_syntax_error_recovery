@@ -1,0 +1,14 @@
+{
+  "name": "Two missing semicolons",
+  "source": "int a\nint b\n",
+  "expected_errors": 2,
+  "error_lines": [
+    1,
+    2
+  ],
+  "actions": [
+    "Insert",
+    "Insert"
+  ],
+  "recovered_source": "int a;\nint b;\n"
+}

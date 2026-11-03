@@ -1,0 +1,12 @@
+{
+  "name": "Extra closing brace",
+  "source": "int a;\na = 1;\n}\n",
+  "expected_errors": 1,
+  "error_lines": [
+    3
+  ],
+  "actions": [
+    "Delete"
+  ],
+  "recovered_source": "int a;\na = 1;\n"
+}

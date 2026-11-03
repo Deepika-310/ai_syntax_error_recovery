@@ -1,0 +1,7 @@
+float marks;
+float total;
+float pct;
+marks = 432;
+total = 500;
+pct = marks / total * 100;
+print(pct);

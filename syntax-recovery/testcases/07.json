@@ -1,0 +1,12 @@
+{
+  "name": "Repeated type keyword",
+  "source": "int int a;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Delete"
+  ],
+  "recovered_source": "int a;\n"
+}

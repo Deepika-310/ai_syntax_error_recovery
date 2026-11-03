@@ -1,0 +1,9 @@
+int x;
+int r;
+x = 0 - 8;
+if (x < 0) {
+    r = 0 - x;
+} else {
+    r = x;
+}
+print(r);

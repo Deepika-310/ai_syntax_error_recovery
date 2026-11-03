@@ -1,0 +1,9 @@
+float total;
+float pay;
+total = 1200;
+if (total >= 1000) {
+    pay = total - total / 10;
+} else {
+    pay = total;
+}
+print(pay);

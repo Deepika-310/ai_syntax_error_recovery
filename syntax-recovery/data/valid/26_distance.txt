@@ -1,0 +1,7 @@
+int s;
+int t;
+int d;
+s = 60;
+t = 3;
+d = s * t;
+print(d);

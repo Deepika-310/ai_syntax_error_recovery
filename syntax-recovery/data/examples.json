@@ -1,0 +1,58 @@
+[
+ {
+  "name": "Valid program",
+  "source": "int a;\nint b;\na = 10;\nb = a + 5;\nif (b > 10) {\n    print(b);\n}\n"
+ },
+ {
+  "name": "Missing semicolon",
+  "source": "int x\nx = 10;\n"
+ },
+ {
+  "name": "Missing semicolon (declaration)",
+  "source": "int a\n"
+ },
+ {
+  "name": "Extra operator",
+  "source": "x = 10 + * 20;\n"
+ },
+ {
+  "name": "Repeated keyword",
+  "source": "int int a;\n"
+ },
+ {
+  "name": "Missing closing parenthesis",
+  "source": "if (x > 10 {\n    print(x);\n}\n"
+ },
+ {
+  "name": "Wrong closing bracket",
+  "source": "while (a > 10] {\n    print(a);\n}\n"
+ },
+ {
+  "name": "Assignment in condition",
+  "source": "if (a = 10) {\n    print(a);\n}\n"
+ },
+ {
+  "name": "Missing operand",
+  "source": "x = a + ;\n"
+ },
+ {
+  "name": "Missing operator",
+  "source": "a = 10 20;\n"
+ },
+ {
+  "name": "Missing operator (identifiers)",
+  "source": "total = price qty;\n"
+ },
+ {
+  "name": "Garbled expression (panic mode)",
+  "source": "int a;\na = + * 10 abc xyz ;\nint b;\nb = 20;\n"
+ },
+ {
+  "name": "Four errors",
+  "source": "int a\nint b;\na = 10 + ;\nif (a > b {\n    print(a)\n}\n"
+ },
+ {
+  "name": "Missing closing brace",
+  "source": "int i;\ni = 0;\nwhile (i < 3) {\n    i = i + 1;\n"
+ }
+]

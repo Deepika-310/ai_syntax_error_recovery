@@ -1,0 +1,27 @@
+# Grammar for the small C-like language.
+# One rule per line. Alternatives are separated by |. "eps" is the empty string.
+# Lowercase / symbol names are terminals, CamelCase names are non-terminals.
+
+Program   -> StmtList
+StmtList  -> Stmt StmtList | eps
+Stmt      -> Decl | AssignStmt | IfStmt | WhileStmt | PrintStmt | Block
+Decl      -> Type id ;
+Type      -> int | float
+AssignStmt -> id = Expr ;
+IfStmt    -> if ( Cond ) Stmt ElsePart
+ElsePart  -> else Stmt | eps
+WhileStmt -> while ( Cond ) Stmt
+PrintStmt -> print ( Expr ) ;
+Block     -> { StmtList }
+Cond      -> Expr RelOp Expr
+RelOp     -> == | != | < | > | <= | >=
+Expr      -> Term ExprRest
+ExprRest  -> + Term ExprRest | - Term ExprRest | eps
+Term      -> Factor TermRest
+TermRest  -> * Factor TermRest | / Factor TermRest | eps
+Factor    -> id | num | ( Expr )
+
+# Dangling else: ElsePart can be "else Stmt" or empty, and "else" is also in
+# FOLLOW(ElsePart). This is the usual conflict. We resolve it by attaching the
+# else to the nearest if, i.e. we choose the non-empty production.
+%prefer ElsePart else

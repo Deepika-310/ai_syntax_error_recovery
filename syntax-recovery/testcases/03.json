@@ -1,0 +1,12 @@
+{
+  "name": "Missing closing parenthesis",
+  "source": "if (x > 10 {\nprint(x);\n}\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Insert"
+  ],
+  "recovered_source": "if (x > 10) {\nprint(x);\n}\n"
+}

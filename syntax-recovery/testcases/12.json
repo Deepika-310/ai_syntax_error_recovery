@@ -1,0 +1,12 @@
+{
+  "name": "Missing semicolon after print",
+  "source": "int a;\na = 3;\nprint(a)\n",
+  "expected_errors": 1,
+  "error_lines": [
+    3
+  ],
+  "actions": [
+    "Insert"
+  ],
+  "recovered_source": "int a;\na = 3;\nprint(a);\n"
+}

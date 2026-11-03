@@ -1,0 +1,7 @@
+int length;
+int width;
+int perimeter;
+length = 10;
+width = 4;
+perimeter = 2 * (length + width);
+print(perimeter);

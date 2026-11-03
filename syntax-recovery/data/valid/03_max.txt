@@ -1,0 +1,11 @@
+int a;
+int b;
+int max;
+a = 12;
+b = 7;
+if (a > b) {
+    max = a;
+} else {
+    max = b;
+}
+print(max);

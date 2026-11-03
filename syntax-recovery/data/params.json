@@ -1,0 +1,8 @@
+{
+  "temperature": 0.03,
+  "tau": 0.4,
+  "delta": 0.03,
+  "cost_weight": 0.1,
+  "k_gate": 4,
+  "kmax": 12
+}

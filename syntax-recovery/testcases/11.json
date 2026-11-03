@@ -1,0 +1,12 @@
+{
+  "name": "Missing closing brace",
+  "source": "int i;\ni = 0;\nwhile (i < 3) {\ni = i + 1;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    4
+  ],
+  "actions": [
+    "Insert"
+  ],
+  "recovered_source": "int i;\ni = 0;\nwhile (i < 3) {\ni = i + 1;\n}\n"
+}

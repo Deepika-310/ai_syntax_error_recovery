@@ -1,0 +1,12 @@
+{
+  "name": "Missing semicolon",
+  "source": "int x\nx = 10;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Insert"
+  ],
+  "recovered_source": "int x;\nx = 10;\n"
+}

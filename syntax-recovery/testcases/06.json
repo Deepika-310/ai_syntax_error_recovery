@@ -1,0 +1,11 @@
+{
+  "name": "Assignment in condition",
+  "source": "if (a = 10) {\nprint(a);\n}\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Panic-mode sync"
+  ]
+}

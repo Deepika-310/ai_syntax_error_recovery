@@ -1,0 +1,6 @@
+int stock;
+int sold;
+stock = 50;
+sold = 8;
+stock = stock - sold;
+print(stock);

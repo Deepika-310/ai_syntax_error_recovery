@@ -1,0 +1,12 @@
+{
+  "name": "Extra operator",
+  "source": "x = 10 + * 20;\n",
+  "expected_errors": 1,
+  "error_lines": [
+    1
+  ],
+  "actions": [
+    "Delete"
+  ],
+  "recovered_source": "x = 10 + 20;\n"
+}

@@ -1,0 +1,7 @@
+int a;
+int b;
+float r;
+a = 3;
+b = 8;
+r = a / b;
+print(r);
